@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+  padding-bottom: 1rem;
+  padding-inline: 3rem;
+}
+
+input {
+  background-color: #101820;
+  color: #fee715;
+  padding: 0.5rem;
+  border-radius: 8px;
+  width: 100%;
+  margin: 0.5rem 0;
+  border: 2px solid #fee715;
+  outline: none;
+  font-weight: 600;
+}
+
+a {
+  position: absolute;
+  right: 3.2rem;
+  top: 12px;
+
+  height: 35px;
+  width: 35px;
+  text-decoration: none;
+  background-color: #fee715;
+  border-radius: 5px;
+
+  line-height: 35px;
+  text-align: center;
+
+  transition: all 0.2s ease-out;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:active {
+  transform: scale(0.92);
+}
+
+.fa-plus {
+  color: #101820;
+}

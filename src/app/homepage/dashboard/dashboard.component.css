@@ -1,0 +1,23 @@
+
+.head {
+  background-color: #101820;
+  color: #fee715;
+  margin-top: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.head h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 1.7rem;
+}
+
+.taskList {
+  height: max-content;
+  background-color: #101820;
+  color: #fee715;
+  margin-top: 3px;
+  border-radius: 0 0 10px 10px;
+}
