@@ -5,8 +5,12 @@
   </div>
   <div class="taskList" *ngIf="taskList.length > 0">
     <div *ngFor="let task of taskList">
-      <div class="task">
+      <div class="task" #taskClicked>
         {{ task }}
+        <div class="buttons">
+          <a (click)="completeTask(taskClicked)"><i class="fa-solid fa-check"></i></a>
+          <a (click)="deleteTask(taskClicked)"><i class="fa-solid fa-trash"></i></a>
+        </div>
       </div>
     </div>
   </div>
