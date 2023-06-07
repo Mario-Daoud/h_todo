@@ -1,3 +1,7 @@
+.container {
+  user-select: none;
+}
+
 .head {
   background-color: #101820;
   color: #fee715;
@@ -10,14 +14,58 @@
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .head h1 {
+    font-size: 1.5rem;
+    text-align: start;
+    padding-left: 1rem;
+  }
+  .subhead h1 i {
+    display: none;
+  }
+}
+
+.subhead {
   padding: 1.7rem;
+  position: relative;
+}
+
+.subhead a {
+  width: max-content;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: #fee715;
+  color: #101820;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out,
+    transform 150ms ease-in-out, border 300ms ease-in-out;
+  text-align: center;
+  position: absolute;
+  right: 3rem;
+  top: 1.5rem;
+  border: 1px solid #101820;
+}
+
+.subhead a:hover {
+  background-color: #101820;
+  color: #fee715;
+  border: 1px solid #fee715;
+  cursor: pointer;
+}
+
+.subhead a:active {
+  transform: scale(0.97);
 }
 
 .taskList {
   height: max-content;
   background-color: #101820;
   color: #fee715;
-  margin-top: 7px;
+  margin-top: 4px;
   border-radius: 0 0 10px 10px;
 }
 

@@ -17,7 +17,6 @@ export class DashboardComponent {
   }
 
   completeTask(task: HTMLDivElement) {
-    console.log(task);
     if (task.style.textDecoration === 'line-through 3px') {
       task.style.textDecoration = 'none';
     } else {
@@ -30,6 +29,13 @@ export class DashboardComponent {
     if (index !== -1) {
       this.taskList.splice(index, 1);
       task.remove();
+    }
+  }
+
+  clearAll() {
+    if (this.taskList.length === 0) return;
+    if (confirm('Are you sure you want to delete all tasks?')) {
+      this.taskList = [];
     }
   }
 }

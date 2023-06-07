@@ -1,15 +1,23 @@
 <div class="container">
   <div class="head">
-    <h1><i class="fa-solid fa-clipboard-list"></i>&nbsp; TO DO LIST</h1>
+    <div class="subhead">
+      <h1><i class="fa-solid fa-clipboard-list"></i>&nbsp; TO DO LIST</h1>
+      <a (click)="clearAll()">&nbsp; CLEAR LIST</a>
+    </div>
     <app-searchbar (addTaskEvent)="addTask($event)"></app-searchbar>
   </div>
+
   <div class="taskList" *ngIf="taskList.length > 0">
     <div *ngFor="let task of taskList">
       <div class="task" #taskClicked>
         {{ task }}
         <div class="buttons">
-          <a (click)="completeTask(taskClicked)"><i class="fa-solid fa-check"></i></a>
-          <a (click)="deleteTask(taskClicked)"><i class="fa-solid fa-trash"></i></a>
+          <a (click)="completeTask(taskClicked)"
+            ><i class="fa-solid fa-check"></i
+          ></a>
+          <a (click)="deleteTask(taskClicked)"
+            ><i class="fa-solid fa-trash"></i
+          ></a>
         </div>
       </div>
     </div>
