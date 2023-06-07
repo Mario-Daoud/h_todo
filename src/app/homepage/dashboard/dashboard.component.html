@@ -12,8 +12,8 @@
       <div class="task" #taskClicked>
         {{ task }}
         <div class="buttons">
-          <a (click)="completeTask(taskClicked)"
-            ><i class="fa-solid fa-check"></i
+          <a (click)="completeTask(taskClicked, icon)"
+            ><i #icon class="fa-solid fa-check"></i
           ></a>
           <a (click)="deleteTask(taskClicked)"
             ><i class="fa-solid fa-trash"></i
